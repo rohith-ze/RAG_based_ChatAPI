@@ -11,10 +11,10 @@
     <!-- Document Upload Section -->
     <h2>Upload a PDF Document</h2>
     <form id="uploadForm" enctype="multipart/form-data">
-        <label for="chat_name">Chat Name:</label>
+        <label for="chat_name">File Name:</label>
         <input type="text" id="chat_name" name="chat_name" required><br><br>
 
-        <label for="file">Select PDF:</label>
+        <label for="file">Select File:</label>
         <input type="file" id="file" name="file" accept="application/pdf" required><br><br>
 
         <button type="submit">Upload Document</button>
@@ -24,13 +24,13 @@
     <!-- Document Query Section -->
     <h2>Query a Document</h2>
     <form id="queryForm">
-        <label for="query_chat_name">Chat Name:</label>
+        <label for="query_chat_name">File Name:</label>
         <input type="text" id="query_chat_name" name="query_chat_name" required><br><br>
 
-        <label for="question">Ask a Question:</label>
+        <label for="question">Question:</label>
         <input type="text" id="question" name="question" required><br><br>
 
-        <button type="submit">Ask Question</button>
+        <button type="submit">Querry</button>
     </form>
     <div id="queryResult"></div>
     <script>

@@ -13,12 +13,13 @@ import re
 app=Flask(__name__)
 
 #Firebase credential initializing
+#give path to the firestore json file
 firebase=credentials.Certificate('C:\\firebase_credential\\tsting-e3e43-firebase-adminsdk-2w2wy-fbb931d857.json')
 firebase_admin.initialize_app(firebase)
 db=firestore.client()
 
-#Pinecone
-pc=Pinecone(api_key="API from Pinecone")
+#Pinecone 
+pc=Pinecone(api_key="API from Pinecone")  #use pinecone API
 index_name='rag'
 
 if index_name not in pc.list_indexes().names():
@@ -28,7 +29,7 @@ if index_name not in pc.list_indexes().names():
 pinecone_index=pc.Index(index_name)
 
 #Google Gemini config
-gai.configure(api_key="Google Gemini API")
+gai.configure(api_key="Google Gemini API")  #use google gemini API
 
 #process PDF and extract text
 def process_pdf(file):
